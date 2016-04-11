@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		987620321CBAB1E400C6B1C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9876201F1CBAAF4B00C6B1C5 /* ViewController.swift */; };
 		987620331CBAB1E400C6B1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620211CBAAF5A00C6B1C5 /* AppDelegate.swift */; };
 		987620341CBAB27700C6B1C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987620241CBAAF5A00C6B1C5 /* LaunchScreen.storyboard */; };
 		987620351CBAB27700C6B1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987620261CBAAF5A00C6B1C5 /* Main.storyboard */; };
+		9876203C1CBBD43800C6B1C5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9876203B1CBBD43800C6B1C5 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		987620011CBA4F2500C6B1C5 /* ZMTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZMTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9876201F1CBAAF4B00C6B1C5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		987620211CBAAF5A00C6B1C5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987620221CBAAF5A00C6B1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		987620251CBAAF5A00C6B1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		987620271CBAAF5A00C6B1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		987620301CBAB0C500C6B1C5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9876203B1CBBD43800C6B1C5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,11 @@
 		9876201B1CBAAA9D00C6B1C5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9876201F1CBAAF4B00C6B1C5 /* ViewController.swift */,
+				987620361CBBD40000C6B1C5 /* Home */,
+				987620371CBBD40000C6B1C5 /* Merchant */,
+				987620381CBBD40000C6B1C5 /* Mine */,
+				987620391CBBD40000C6B1C5 /* More */,
+				9876203A1CBBD40000C6B1C5 /* Onsite */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,6 +105,42 @@
 				987620261CBAAF5A00C6B1C5 /* Main.storyboard */,
 			);
 			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		987620361CBBD40000C6B1C5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9876203B1CBBD43800C6B1C5 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		987620371CBBD40000C6B1C5 /* Merchant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Merchant;
+			sourceTree = "<group>";
+		};
+		987620381CBBD40000C6B1C5 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		987620391CBBD40000C6B1C5 /* More */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		9876203A1CBBD40000C6B1C5 /* Onsite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Onsite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,8 +214,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				987620321CBAB1E400C6B1C5 /* ViewController.swift in Sources */,
 				987620331CBAB1E400C6B1C5 /* AppDelegate.swift in Sources */,
+				9876203C1CBBD43800C6B1C5 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
