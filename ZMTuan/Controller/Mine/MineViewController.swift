@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  MineViewController.swift
 //  ZMTuan
 //
 //  Created by zm on 4/11/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
+class MineViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

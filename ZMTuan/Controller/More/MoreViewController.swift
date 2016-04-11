@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  MoreViewController.swift
 //  ZMTuan
 //
 //  Created by zm on 4/11/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
+class MoreViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

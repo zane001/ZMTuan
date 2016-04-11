@@ -12,14 +12,61 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var rootTabBarController: UITabBarController!
 
     func initRootVC() {
         self.window?.hidden = false
+        let vc1 = HomeViewController()
+        let nav1 = UINavigationController(rootViewController: vc1)
+        let vc2 = OnsiteViewController()
+        let nav2 = UINavigationController(rootViewController: vc2)
+        let vc3 = MerchantViewController()
+        let nav3 = UINavigationController(rootViewController: vc3)
+        let vc4 = MineViewController()
+        let nav4 = UINavigationController(rootViewController: vc4)
+        let vc5 = MoreViewController()
+        let nav5 = UINavigationController(rootViewController: vc5)
+        
+        vc1.title = "团购"
+        vc2.title = "上门"
+        vc3.title = "商家"
+        vc4.title = "我的"
+        vc5.title = "更多"
+        
+        let viewControllers: NSArray = [nav1, nav2, nav3, nav4, nav5]
+        
+        self.rootTabBarController = UITabBarController()
+        self.rootTabBarController.setViewControllers(viewControllers as? [UIViewController], animated: true)
+        self.window?.rootViewController = self.rootTabBarController
+        
+        let tabBar = self.rootTabBarController.tabBar
+        let item1: UITabBarItem = tabBar.items![0]
+        let item2: UITabBarItem = tabBar.items![1]
+        let item3: UITabBarItem = tabBar.items![2]
+        let item4: UITabBarItem = tabBar.items![3]
+        let item5: UITabBarItem = tabBar.items![4]
+        
+        item1.selectedImage = UIImage(named: "icon_tabbar_homepage_selected")
+        item1.image = UIImage(named: "icon_tabbar_homepage")
+        item2.selectedImage = UIImage(named: "icon_tabbar_onsite_selected")
+        item2.image = UIImage(named: "icon_tabbar_onsite")
+        item3.selectedImage = UIImage(named: "icon_tabbar_merchant_selected")
+        item3.image = UIImage(named: "icon_tabbar_merchant_normal")
+        item4.selectedImage = UIImage(named: "icon_tabbar_mine_selected")
+        item4.image = UIImage(named: "icon_tabbar_mine")
+        item5.selectedImage = UIImage(named: "icon_tabbar_misc_selected")
+        item5.image = UIImage(named: "icon_tabbar_misc")
+        
+//        改变UITabBarItem字体颜色
+        self.rootTabBarController.tabBar.tintColor = RGB(54, g: 185, b: 175)
+        
+//        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
 
+        self.window?.makeKeyAndVisible()
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+        self.initRootVC()
         return true
     }
 
