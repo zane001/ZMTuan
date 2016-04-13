@@ -8,11 +8,20 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var menuArray: NSMutableArray!
+    var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor.whiteColor()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        self.initData()
+        self.setNav()
+        self.initTableView()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,6 +29,24 @@ class HomeViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    func initData() {
+        let plistPath: String = NSBundle.mainBundle().pathForResource("menuData", ofType: "plist")!
+        menuArray = NSMutableArray.init(contentsOfFile: plistPath)
+     
+    }
+    
+    func setNav() {
+        
+    }
+    
+    func initTableView() {
+        self.tableView = UITableView(frame: CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT-49-64), style: .Grouped)
+        self.tableView.registerClass(HomeMenuCell.classForCoder(), forCellReuseIdentifier: "menuCell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.view.addSubview(self.tableView)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -27,25 +54,38 @@ class HomeViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 5
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        return 1
+    }
+
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return 180
+        }
         return 0
     }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if indexPath.section == 0 {
+            
+            let cell = tableView.dequeueReusableCellWithIdentifier("menuCell") as? HomeMenuCell
+            cell?.initWithStyle(.Default, reuseIdentifier: "menuCell", menuArray: menuArray!)
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+            cell?.selectionStyle = UITableViewCellSelectionStyle.None
 
-        // Configure the cell...
-
-        return cell
+            return cell!
+        } else {
+            return HomeMenuCell()
+        }
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
