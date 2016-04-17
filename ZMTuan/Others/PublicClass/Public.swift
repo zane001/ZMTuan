@@ -22,7 +22,9 @@ func RGB(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor {
 let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
 let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
 
+// 导航栏的颜色
 let navigationBarColor = RGB(33, g: 192, b: 174)
+// 间隔线的颜色
 let separaterColor = RGB(200, g: 199, b: 204)
 
         

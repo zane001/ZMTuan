@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84FC64610A6D693397ABDFBD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C23326863A97092FCD082CF4 /* libPods.a */; };
 		987620331CBAB1E400C6B1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620211CBAAF5A00C6B1C5 /* AppDelegate.swift */; };
 		987620341CBAB27700C6B1C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987620241CBAAF5A00C6B1C5 /* LaunchScreen.storyboard */; };
 		987620351CBAB27700C6B1C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 987620261CBAAF5A00C6B1C5 /* Main.storyboard */; };
@@ -64,9 +65,17 @@
 		987620BC1CBE881C00C6B1C5 /* icon_homepage_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 9876209E1CBE881C00C6B1C5 /* icon_homepage_map.png */; };
 		987620BD1CBE881C00C6B1C5 /* icon_homepage_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 9876209F1CBE881C00C6B1C5 /* icon_homepage_search.png */; };
 		987620BE1CBE881C00C6B1C5 /* icon_homepage_upArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987620A01CBE881C00C6B1C5 /* icon_homepage_upArrow@2x.png */; };
+		987620C01CC2237D00C6B1C5 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 987620BF1CC2237D00C6B1C5 /* Podfile */; };
+		987620C41CC28AD000C6B1C5 /* NetworkSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620C31CC28AD000C6B1C5 /* NetworkSingleton.swift */; };
+		987620C61CC3320300C6B1C5 /* RushDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620C51CC3320300C6B1C5 /* RushDataModel.swift */; };
+		987620C81CC3321500C6B1C5 /* RushDealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620C71CC3321500C6B1C5 /* RushDealsModel.swift */; };
+		987620CC1CC368AD00C6B1C5 /* RushCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620CB1CC368AD00C6B1C5 /* RushCell.swift */; };
+		987620CE1CC3883D00C6B1C5 /* RushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620CD1CC3883D00C6B1C5 /* RushViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BF3DAF7F1EAEB24F49176C7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6A5E43DEC83D43AF4DC00976 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		987620011CBA4F2500C6B1C5 /* ZMTuan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZMTuan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		987620211CBAAF5A00C6B1C5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		987620221CBAAF5A00C6B1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +135,14 @@
 		9876209E1CBE881C00C6B1C5 /* icon_homepage_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_map.png; sourceTree = "<group>"; };
 		9876209F1CBE881C00C6B1C5 /* icon_homepage_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_homepage_search.png; sourceTree = "<group>"; };
 		987620A01CBE881C00C6B1C5 /* icon_homepage_upArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_homepage_upArrow@2x.png"; sourceTree = "<group>"; };
+		987620BF1CC2237D00C6B1C5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		987620C11CC238DE00C6B1C5 /* Bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		987620C31CC28AD000C6B1C5 /* NetworkSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSingleton.swift; sourceTree = "<group>"; };
+		987620C51CC3320300C6B1C5 /* RushDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushDataModel.swift; sourceTree = "<group>"; };
+		987620C71CC3321500C6B1C5 /* RushDealsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushDealsModel.swift; sourceTree = "<group>"; };
+		987620CB1CC368AD00C6B1C5 /* RushCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushCell.swift; sourceTree = "<group>"; };
+		987620CD1CC3883D00C6B1C5 /* RushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushViewController.swift; sourceTree = "<group>"; };
+		C23326863A97092FCD082CF4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,17 +150,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FC64610A6D693397ABDFBD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2601C7883D7AFF5DBC8B2111 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A5E43DEC83D43AF4DC00976 /* Pods.debug.xcconfig */,
+				0BF3DAF7F1EAEB24F49176C7 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F579CE268A454F09CD63A77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C23326863A97092FCD082CF4 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		98761FF81CBA4F2500C6B1C5 = {
 			isa = PBXGroup;
 			children = (
+				987620BF1CC2237D00C6B1C5 /* Podfile */,
 				987620031CBA4F2500C6B1C5 /* ZMTuan */,
 				987620021CBA4F2500C6B1C5 /* Products */,
+				2601C7883D7AFF5DBC8B2111 /* Pods */,
+				5F579CE268A454F09CD63A77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,6 +213,7 @@
 				987620211CBAAF5A00C6B1C5 /* AppDelegate.swift */,
 				987620221CBAAF5A00C6B1C5 /* Assets.xcassets */,
 				987620231CBAAF5A00C6B1C5 /* Base.lproj */,
+				987620C11CC238DE00C6B1C5 /* Bridging.h */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -221,6 +260,7 @@
 			children = (
 				987620671CBBF6DA00C6B1C5 /* Shop */,
 				9876203D1CBBD53700C6B1C5 /* HomeViewController.swift */,
+				987620CD1CC3883D00C6B1C5 /* RushViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -260,6 +300,7 @@
 		987620471CBBDB6100C6B1C5 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				987620C21CC28AAE00C6B1C5 /* Network */,
 				9876204B1CBBE11400C6B1C5 /* Resource */,
 				987620481CBBDB6100C6B1C5 /* PublicClass */,
 			);
@@ -383,6 +424,7 @@
 				9876206A1CBBF71600C6B1C5 /* Shop */,
 				9876207C1CBE671C00C6B1C5 /* BtnView.swift */,
 				9876207E1CBE69EF00C6B1C5 /* HomeMenuCell.swift */,
+				987620CB1CC368AD00C6B1C5 /* RushCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -410,6 +452,8 @@
 			children = (
 				9876206C1CBBF74300C6B1C5 /* Discount */,
 				9876206D1CBBF74300C6B1C5 /* Shop */,
+				987620C51CC3320300C6B1C5 /* RushDataModel.swift */,
+				987620C71CC3321500C6B1C5 /* RushDealsModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -436,6 +480,14 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		987620C21CC28AAE00C6B1C5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				987620C31CC28AD000C6B1C5 /* NetworkSingleton.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -443,9 +495,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 987620131CBA4F2500C6B1C5 /* Build configuration list for PBXNativeTarget "ZMTuan" */;
 			buildPhases = (
+				CA6DB6670FA7DF9ACCCA1DB9 /* Check Pods Manifest.lock */,
 				98761FFD1CBA4F2500C6B1C5 /* Sources */,
 				98761FFE1CBA4F2500C6B1C5 /* Frameworks */,
 				98761FFF1CBA4F2500C6B1C5 /* Resources */,
+				5AA907C047EF777ABE2F0DE1 /* Embed Pods Frameworks */,
+				326DA4FB1405F16B69C7C8E1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -507,6 +562,7 @@
 				987620A21CBE881C00C6B1C5 /* icon_deal_anytime_refund@2x.png in Resources */,
 				987620A91CBE881C00C6B1C5 /* todaySpecialHeaderTitleImage@3x.png in Resources */,
 				987620601CBBE1A600C6B1C5 /* icon_tabbar_mine@2x.png in Resources */,
+				987620C01CC2237D00C6B1C5 /* Podfile in Resources */,
 				987620BD1CBE881C00C6B1C5 /* icon_homepage_search.png in Resources */,
 				987620641CBBE1A600C6B1C5 /* icon_tabbar_onsite@2x.png in Resources */,
 				987620B11CBE881C00C6B1C5 /* icon_homepage_hotelCategory.png in Resources */,
@@ -544,12 +600,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		326DA4FB1405F16B69C7C8E1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AA907C047EF777ABE2F0DE1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA6DB6670FA7DF9ACCCA1DB9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		98761FFD1CBA4F2500C6B1C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				987620C61CC3320300C6B1C5 /* RushDataModel.swift in Sources */,
 				987620441CBBD57200C6B1C5 /* MoreViewController.swift in Sources */,
+				987620CE1CC3883D00C6B1C5 /* RushViewController.swift in Sources */,
 				987620331CBAB1E400C6B1C5 /* AppDelegate.swift in Sources */,
 				987620791CBBFA3D00C6B1C5 /* DiscountTopicCell.swift in Sources */,
 				9876207F1CBE69EF00C6B1C5 /* HomeMenuCell.swift in Sources */,
@@ -557,11 +663,14 @@
 				987620731CBBF9F100C6B1C5 /* ShopPriceCell.swift in Sources */,
 				987620771CBBFA0D00C6B1C5 /* ShopRecommendCell.swift in Sources */,
 				987620401CBBD55F00C6B1C5 /* MerchantViewController.swift in Sources */,
+				987620C41CC28AD000C6B1C5 /* NetworkSingleton.swift in Sources */,
 				9876207D1CBE671C00C6B1C5 /* BtnView.swift in Sources */,
+				987620C81CC3321500C6B1C5 /* RushDealsModel.swift in Sources */,
 				9876204A1CBBDB8600C6B1C5 /* Public.swift in Sources */,
 				987620461CBBD58800C6B1C5 /* OnsiteViewController.swift in Sources */,
 				987620751CBBF9FE00C6B1C5 /* ShopImageCell.swift in Sources */,
 				987620421CBBD56A00C6B1C5 /* MineViewController.swift in Sources */,
+				987620CC1CC368AD00C6B1C5 /* RushCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +781,7 @@
 		};
 		987620141CBA4F2500C6B1C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5E43DEC83D43AF4DC00976 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -679,12 +789,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zm.ZMTuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ZMTuan/SupportingFiles/Bridging.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		987620151CBA4F2500C6B1C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BF3DAF7F1EAEB24F49176C7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -692,6 +804,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zm.ZMTuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ZMTuan/SupportingFiles/Bridging.h;
 			};
 			name = Release;
 		};

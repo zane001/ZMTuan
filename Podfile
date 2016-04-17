@@ -1,0 +1,5 @@
+platform :ios, '9.0'
+pod 'MJRefresh'
+pod 'AFNetworking', '~>3.0'
+pod 'MJExtension'
+pod 'SDWebImage'

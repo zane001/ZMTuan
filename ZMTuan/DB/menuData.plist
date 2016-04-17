@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   menuData.plist
-   ZMTuan
-
-   Created by zm on 4/13/16.
-   Copyright (c) 2016 zm. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
       <array>
         <dict>
@@ -43,7 +36,7 @@
             <key>title</key>
             <string>周边游</string>
             <key>image</key>
-            <string>icon_homepage_foodCategory.png</string>
+            <string>icon_homepage_entertainmentCategory.png</string>
         </dict>
         <dict>
             <key>title</key>
@@ -60,51 +53,51 @@
         
         <dict>
             <key>title</key>
-            <string>一月</string>
+            <string>美发</string>
             <key>image</key>
-            <string>icon_homepage_foodCategory.png</string>
+            <string>icon_homepage_beautyCategory.png</string>
         </dict>
         <dict>
             <key>title</key>
-            <string>二月</string>
+            <string>购物</string>
             <key>image</key>
-            <string>icon_homepage_movieCategory.png</string>
+            <string>icon_homepage_lifeServiceCategory.png</string>
         </dict>
         <dict>
             <key>title</key>
-            <string>三月</string>
+            <string>洗浴</string>
             <key>image</key>
             <string>icon_homepage_hotelCategory.png</string>
         </dict>
         <dict>
             <key>title</key>
-            <string>四月</string>
+            <string>景点</string>
             <key>image</key>
             <string>icon_homepage_KTVCategory.png</string>
         </dict>
         <dict>
             <key>title</key>
-            <string>五月</string>
+            <string>生活</string>
             <key>image</key>
             <string>icon_homepage_foodCategory.png</string>
         </dict>
         <dict>
             <key>title</key>
-            <string>六月</string>
+            <string>小吃</string>
             <key>image</key>
-            <string>icon_homepage_foodCategory.png</string>
+            <string>icon_homepage_entertainmentCategory.png</string>
         </dict>
         <dict>
             <key>title</key>
-            <string>七月</string>
-            <key>image</key>
-            <string>icon_homepage_foodCategory.png</string>
-        </dict>
-        <dict>
-            <key>title</key>
-            <string>八月</string>
+            <string>美甲</string>
             <key>image</key>
             <string>icon_homepage_takeoutCategory.png</string>
+        </dict>
+        <dict>
+            <key>title</key>
+            <string>火锅</string>
+            <key>image</key>
+            <string>icon_homepage_shoppingCategory.png</string>
         </dict>
     </array>
 </plist>

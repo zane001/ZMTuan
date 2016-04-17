@@ -89,9 +89,9 @@ class HomeMenuCell: UITableViewCell, UIScrollViewDelegate {
         pageControll = UIPageControl(frame: CGRectMake(SCREEN_WIDTH/2-20, 160, 0, 20))
         pageControll?.currentPage = 0
         pageControll?.numberOfPages = 2
-        self.addSubview(pageControll!)
         pageControll?.currentPageIndicatorTintColor = navigationBarColor
         pageControll?.pageIndicatorTintColor = UIColor.grayColor()
+        self.addSubview(pageControll!)
     }
     
     func onTapBtnView(sender: UIGestureRecognizer) {
