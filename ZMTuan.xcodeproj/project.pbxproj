@@ -71,6 +71,12 @@
 		987620C81CC3321500C6B1C5 /* RushDealsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620C71CC3321500C6B1C5 /* RushDealsModel.swift */; };
 		987620CC1CC368AD00C6B1C5 /* RushCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620CB1CC368AD00C6B1C5 /* RushCell.swift */; };
 		987620CE1CC3883D00C6B1C5 /* RushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987620CD1CC3883D00C6B1C5 /* RushViewController.swift */; };
+		98D5F2EF1CC52F2D00C2BBAE /* HotQueueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F2EE1CC52F2D00C2BBAE /* HotQueueModel.swift */; };
+		98D5F2F51CC5312F00C2BBAE /* HotQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F2F41CC5312F00C2BBAE /* HotQueueViewController.swift */; };
+		98D5F2F71CC5351F00C2BBAE /* DiscountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F2F61CC5351F00C2BBAE /* DiscountModel.swift */; };
+		98D5F2F91CC5361E00C2BBAE /* DiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F2F81CC5361E00C2BBAE /* DiscountCell.swift */; };
+		98D5F2FF1CC5368C00C2BBAE /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F2FE1CC5368C00C2BBAE /* DiscountViewController.swift */; };
+		98D5F3031CC5378A00C2BBAE /* HotQueueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3021CC5378A00C2BBAE /* HotQueueCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +148,12 @@
 		987620C71CC3321500C6B1C5 /* RushDealsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushDealsModel.swift; sourceTree = "<group>"; };
 		987620CB1CC368AD00C6B1C5 /* RushCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushCell.swift; sourceTree = "<group>"; };
 		987620CD1CC3883D00C6B1C5 /* RushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushViewController.swift; sourceTree = "<group>"; };
+		98D5F2EE1CC52F2D00C2BBAE /* HotQueueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotQueueModel.swift; sourceTree = "<group>"; };
+		98D5F2F41CC5312F00C2BBAE /* HotQueueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotQueueViewController.swift; sourceTree = "<group>"; };
+		98D5F2F61CC5351F00C2BBAE /* DiscountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountModel.swift; sourceTree = "<group>"; };
+		98D5F2F81CC5361E00C2BBAE /* DiscountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountCell.swift; sourceTree = "<group>"; };
+		98D5F2FE1CC5368C00C2BBAE /* DiscountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
+		98D5F3021CC5378A00C2BBAE /* HotQueueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotQueueCell.swift; sourceTree = "<group>"; };
 		C23326863A97092FCD082CF4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -261,6 +273,8 @@
 				987620671CBBF6DA00C6B1C5 /* Shop */,
 				9876203D1CBBD53700C6B1C5 /* HomeViewController.swift */,
 				987620CD1CC3883D00C6B1C5 /* RushViewController.swift */,
+				98D5F2F41CC5312F00C2BBAE /* HotQueueViewController.swift */,
+				98D5F2FE1CC5368C00C2BBAE /* DiscountViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -425,6 +439,8 @@
 				9876207C1CBE671C00C6B1C5 /* BtnView.swift */,
 				9876207E1CBE69EF00C6B1C5 /* HomeMenuCell.swift */,
 				987620CB1CC368AD00C6B1C5 /* RushCell.swift */,
+				98D5F2F81CC5361E00C2BBAE /* DiscountCell.swift */,
+				98D5F3021CC5378A00C2BBAE /* HotQueueCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -454,6 +470,8 @@
 				9876206D1CBBF74300C6B1C5 /* Shop */,
 				987620C51CC3320300C6B1C5 /* RushDataModel.swift */,
 				987620C71CC3321500C6B1C5 /* RushDealsModel.swift */,
+				98D5F2EE1CC52F2D00C2BBAE /* HotQueueModel.swift */,
+				98D5F2F61CC5351F00C2BBAE /* DiscountModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -658,14 +676,20 @@
 				987620CE1CC3883D00C6B1C5 /* RushViewController.swift in Sources */,
 				987620331CBAB1E400C6B1C5 /* AppDelegate.swift in Sources */,
 				987620791CBBFA3D00C6B1C5 /* DiscountTopicCell.swift in Sources */,
+				98D5F3031CC5378A00C2BBAE /* HotQueueCell.swift in Sources */,
 				9876207F1CBE69EF00C6B1C5 /* HomeMenuCell.swift in Sources */,
+				98D5F2F51CC5312F00C2BBAE /* HotQueueViewController.swift in Sources */,
+				98D5F2FF1CC5368C00C2BBAE /* DiscountViewController.swift in Sources */,
 				9876203E1CBBD53700C6B1C5 /* HomeViewController.swift in Sources */,
 				987620731CBBF9F100C6B1C5 /* ShopPriceCell.swift in Sources */,
 				987620771CBBFA0D00C6B1C5 /* ShopRecommendCell.swift in Sources */,
 				987620401CBBD55F00C6B1C5 /* MerchantViewController.swift in Sources */,
 				987620C41CC28AD000C6B1C5 /* NetworkSingleton.swift in Sources */,
+				98D5F2F91CC5361E00C2BBAE /* DiscountCell.swift in Sources */,
+				98D5F2F71CC5351F00C2BBAE /* DiscountModel.swift in Sources */,
 				9876207D1CBE671C00C6B1C5 /* BtnView.swift in Sources */,
 				987620C81CC3321500C6B1C5 /* RushDealsModel.swift in Sources */,
+				98D5F2EF1CC52F2D00C2BBAE /* HotQueueModel.swift in Sources */,
 				9876204A1CBBDB8600C6B1C5 /* Public.swift in Sources */,
 				987620461CBBD58800C6B1C5 /* OnsiteViewController.swift in Sources */,
 				987620751CBBF9FE00C6B1C5 /* ShopImageCell.swift in Sources */,

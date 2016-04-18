@@ -43,9 +43,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         rushArray = []
         let plistPath: String = NSBundle.mainBundle().pathForResource("menuData", ofType: "plist")!
         menuArray = NSMutableArray.init(contentsOfFile: plistPath)
-     
+
     }
     
+//    设置上方导航条
     func setNav() {
         let backView: UIView = UIView(frame: CGRectMake(0, 0, SCREEN_WIDTH, 64))
         backView.backgroundColor = navigationBarColor
@@ -99,8 +100,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.view.addSubview(self.tableView)
-        self.tableView.mj_header = header
-        self.tableView.mj_footer = footer
+        
         self.refreshTableView()
     }
     
@@ -128,9 +128,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
 //        设置正在刷新的动画图片
         self.header.setImages(refreshingImages as [AnyObject], forState: .Refreshing)
-        
+
+        self.tableView.mj_header = header
 //        马上进入刷新状态
-        self.header.beginRefreshing()
+        self.tableView.mj_header.beginRefreshing()
     }
     
     
@@ -163,10 +164,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.rushArray.addObject(deals!)
             }
             self.tableView.reloadData()
-            self.header.endRefreshing()
+            self.tableView.mj_header.endRefreshing()
             }) { (error) in
-                print(error)
-                self.header.endRefreshing()
+//                print(error)
+                self.tableView.mj_header.endRefreshing()
         }
         
     }
@@ -206,11 +207,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            
-            let cell = tableView.dequeueReusableCellWithIdentifier("menuCell") as! HomeMenuCell
-            cell.initWithStyle(.Default, reuseIdentifier: "menuCell", menuArray: menuArray!)
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
-            return cell
+
+            let cellIdentifier = "menuCell"
+            var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+
+            let menuCell = HomeMenuCell()
+            cell = menuCell.initWithStyle(.Default, reuseIdentifier: cellIdentifier, menuArray: menuArray)
+
+            cell!.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell!
         } else if indexPath.section == 1 {
 //   如果rushArray数据为空
             if rushArray.count == 0 {

@@ -68,7 +68,7 @@ class RushCell: UITableViewCell {
     func setRushData(rushData: NSMutableArray) {
         for i in 0 ..< 3 {
             let rush = rushData[i] as! RushDealsModel
-            let imageUrl = rush.mdcLogoUrl
+            var imageUrl = rush.mdcLogoUrl
             var newPrice: Int32 = 0
             if rush.campaignPrice != nil {
                 newPrice = rush.campaignPrice.intValue
@@ -76,7 +76,9 @@ class RushCell: UITableViewCell {
             let oldPrice = rush.price.intValue
             
             let imageView: UIImageView = (self.viewWithTag(20 + i) as? UIImageView)!
-            imageView.sd_setImageWithURL(NSURL(string: imageUrl), placeholderImage: nil)
+//            美团api接口图片地址中带有w.h，替换为200.120，图片显示正常
+            imageUrl = imageUrl.stringByReplacingOccurrencesOfString("w.h", withString: "200.120")
+            imageView.sd_setImageWithURL(NSURL(string: imageUrl), placeholderImage: UIImage(named: "todaySpecialHeaderTitleImage"))
             
             let newPriceLabel = self.viewWithTag(50 + i) as? UILabel
             newPriceLabel!.text = "\(newPrice)元"

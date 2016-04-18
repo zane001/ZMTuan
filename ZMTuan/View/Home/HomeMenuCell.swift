@@ -26,7 +26,7 @@ class HomeMenuCell: UITableViewCell, UIScrollViewDelegate {
     var scrollView: UIScrollView?
     var pageControll: UIPageControl?
     
-    func initWithStyle(style: UITableViewCellStyle, reuseIdentifier: String?, menuArray: NSMutableArray) {
+    func initWithStyle(style: UITableViewCellStyle, reuseIdentifier: String?, menuArray: NSMutableArray) -> HomeMenuCell {
 
         view1 = UIView(frame: CGRectMake(0, 0, SCREEN_WIDTH, 160))
         view2 = UIView(frame: CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, 160))
@@ -92,6 +92,8 @@ class HomeMenuCell: UITableViewCell, UIScrollViewDelegate {
         pageControll?.currentPageIndicatorTintColor = navigationBarColor
         pageControll?.pageIndicatorTintColor = UIColor.grayColor()
         self.addSubview(pageControll!)
+        
+        return self
     }
     
     func onTapBtnView(sender: UIGestureRecognizer) {
@@ -99,6 +101,7 @@ class HomeMenuCell: UITableViewCell, UIScrollViewDelegate {
     }
     
 //    MARK: UIScrollViewDelegate
+//    滑动时显示处于哪个页面的小圆点
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let scrollViewWidth: CGFloat = scrollView.frame.size.width
         let x: CGFloat = scrollView.contentOffset.x
