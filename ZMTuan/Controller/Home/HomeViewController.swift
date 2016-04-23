@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RushDelegate {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, RushDelegate, DiscountDelegate {
 
     var menuArray: NSMutableArray!
     var tableView: UITableView!
@@ -41,6 +41,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func initData() {
         rushArray = []
+        discountArray = []
         let plistPath: String = NSBundle.mainBundle().pathForResource("menuData", ofType: "plist")!
         menuArray = NSMutableArray.init(contentsOfFile: plistPath)
 
@@ -138,6 +139,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func refreshData() {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { 
             self.getRushBuyData()
+            self.getDiscountData()
             dispatch_async(dispatch_get_main_queue(), { 
                 
             })
@@ -172,6 +174,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+//    请求折扣数据
+    func getDiscountData() {
+        let url = "http://api.meituan.com/group/v1/deal/topic/discount/city/1?ci=1&client=iphone&movieBundleVersion=100&msid=48E2B810-805D-4821-9CDD-D5C9E01BC98A2015-06-17-14-50363&userid=10086&utm_campaign=AgroupBgroupD100Fab_chunceshishuju__a__a___b1junglehomepagecatesort__b__leftflow___ab_gxhceshi__nostrategy__leftflow___ab_gxhceshi0202__b__a___ab_pindaochangsha__a__leftflow___ab_xinkeceshi__b__leftflow___ab_gxtest__gd__leftflow___ab_gxh_82__nostrategy__leftflow___ab_pindaoshenyang__a__leftflow___i_group_5_2_deallist_poitype__d__d___ab_b_food_57_purepoilist_extinfo__a__a___ab_trip_yidizhoubianyou__b__leftflow___ab_i_group_5_3_poidetaildeallist__a__b___ab_waimaizhanshi__b__b1___a20141120nanning__m1__leftflow___ab_pindaoquxincelue__a__leftflow___ab_i_group_5_5_onsite__b__b___ab_i_group_5_6_searchkuang__a__leftflow&utm_content=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&utm_medium=iphone&utm_source=AppStore&utm_term=5.7&uuid=4B8C0B46F5B0527D55EA292904FD7E12E48FB7BEA8DF50BFE7828AF7F20BB08D&version_name=5.7"
+        NetworkSingleton.sharedManager.sharedSingleton.getDiscountResult([:], url: url, successBlock: { (responseBody) in
+            let dataDict = responseBody.objectForKey("data")!
+
+            if self.discountArray != nil {
+                self.discountArray.removeAllObjects()
+            }
+            for i in 0 ..< dataDict.count {
+                let discount = DiscountModel.mj_objectWithKeyValues(dataDict[i])
+                self.discountArray.addObject(discount)
+            }
+
+            self.tableView.reloadData()
+            self.tableView.mj_header.endRefreshing()
+            }) { (error) in
+                print(error)
+                self.tableView.mj_header.endRefreshing()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -195,6 +219,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else if indexPath.section == 1 {
             if rushArray.count != 0 {
                 return 120
+            } else {
+                return 0
+            }
+        } else if indexPath.section == 2{
+            if discountArray.count != 0 {
+                return 160
             } else {
                 return 0
             }
@@ -239,6 +269,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell?.selectionStyle = UITableViewCellSelectionStyle.None
                 return cell!
             }
+        } else if indexPath.section == 2 {
+            if discountArray.count == 0 {
+                let cellIdentifier = "noMoreCell"
+                var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+                if cell == nil {
+                    cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
+                }
+                cell?.selectionStyle = .None
+                return cell!
+            } else {
+                let cellIdentifier = "discountCell"
+                var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? DiscountCell
+                if cell == nil {
+                    cell = DiscountCell(style: .Default, reuseIdentifier: cellIdentifier)
+                }
+                if discountArray.count != 0 {
+                    cell?.setDiscountArray(discountArray)
+                }
+                cell?.delegate = self
+                cell?.selectionStyle = .None
+                return cell!
+            }
         } else {
             return HomeMenuCell()
         }
@@ -256,9 +308,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 5
     }
     
+//    MARK: RushDelegate
     func didSelectRushIndex(index: NSInteger) {
         let rushVC = RushViewController()
         self.navigationController?.pushViewController(rushVC, animated: true)
+    }
+    
+//  MARK: DiscountDelegate
+    func didSelectUrl(urlStr: String, withType type: NSNumber, withId ID: NSNumber, withTitle title: String) {
+        
     }
     
     /*

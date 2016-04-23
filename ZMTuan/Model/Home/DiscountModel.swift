@@ -10,15 +10,15 @@ import Foundation
 
 class DiscountModel: NSObject {
     var position: NSNumber!
-    var typeFaceColor: String!
+    var typeface_color: String!
     var id: NSNumber!
     var share: NSMutableDictionary!
     var title: String!
     var module: String!
-    var mainTitle: String!
-    var tplUrl: String!
+    var maintitle: String!
+    var tplurl: String!
     var type: NSNumber!
-    var imageUrl: String!
+    var imageurl: String!
     var solds: NSNumber!
-    var deputyTitle: String!
+    var deputytitle: String!
 }

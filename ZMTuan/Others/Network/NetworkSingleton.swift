@@ -44,5 +44,17 @@ class NetworkSingleton {
                 failureBlock(error: errorString!)
         }
     }
+    
+//    MARK: 折扣
+    func getDiscountResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+        let manager = self.baseHttpRequest()
+        let urlString = url.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        manager.GET(urlString!, parameters: userInfo, success: { (operation, object) in
+            successBlock(responseBody: object!)
+        }) { (operation, error) in
+            let errorString = error.userInfo["NSLocalizedDescription"] as? String
+            failureBlock(error: errorString!)
+        }
+    }
 
 }
