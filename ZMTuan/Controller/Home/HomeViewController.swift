@@ -42,6 +42,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func initData() {
         rushArray = []
         discountArray = []
+        recommendArray = []
         let plistPath: String = NSBundle.mainBundle().pathForResource("menuData", ofType: "plist")!
         menuArray = NSMutableArray.init(contentsOfFile: plistPath)
 
@@ -140,6 +141,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) { 
             self.getRushBuyData()
             self.getDiscountData()
+            self.getRecommendData()
             dispatch_async(dispatch_get_main_queue(), { 
                 
             })
@@ -166,7 +168,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.rushArray.addObject(deals!)
             }
             self.tableView.reloadData()
-            self.tableView.mj_header.endRefreshing()
+//            self.tableView.mj_header.endRefreshing()
             }) { (error) in
 //                print(error)
                 self.tableView.mj_header.endRefreshing()
@@ -189,6 +191,28 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
 
             self.tableView.reloadData()
+//            self.tableView.mj_header.endRefreshing()
+            }) { (error) in
+                print(error)
+                self.tableView.mj_header.endRefreshing()
+        }
+    }
+    
+//    请求“推荐”数据
+    func getRecommendData() {
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let url = "http://api.meituan.com/group/v1/recommend/homepage/city/1?__skck=40aaaf01c2fc4801b9c059efcd7aa146&__skcy=mrUZYo7999nH8WgTicdfzaGjaSQ=&__skno=51156DC4-B59A-4108-8812-AD05BF227A47&__skts=1434530933.303717&__skua=bd6b6e8eadfad15571a15c3b9ef9199a&__vhost=api.mobile.meituan.com&ci=1&client=iphone&limit=40&movieBundleVersion=100&msid=48E2B810-805D-4821-9CDD-D5C9E01BC98A2015-06-17-14-50363&offset=0&position=\(delegate.latitude),\(delegate.longitude)&userId=10086&userid=10086&utm_campaign=AgroupBgroupD100Fab_chunceshishuju__a__a___b1junglehomepagecatesort__b__leftflow___ab_gxhceshi__nostrategy__leftflow___ab_gxhceshi0202__b__a___ab_pindaochangsha__a__leftflow___ab_xinkeceshi__b__leftflow___ab_gxtest__gd__leftflow___ab_gxh_82__nostrategy__leftflow___ab_pindaoshenyang__a__leftflow___i_group_5_2_deallist_poitype__d__d___ab_b_food_57_purepoilist_extinfo__a__a___ab_trip_yidizhoubianyou__b__leftflow___ab_i_group_5_3_poidetaildeallist__a__b___ab_waimaizhanshi__b__b1___a20141120nanning__m1__leftflow___ab_pind"
+        print("latitude \(delegate.latitude) -- longitude \(delegate.longitude)")
+        NetworkSingleton.sharedManager.sharedSingleton.getRecommendResult([:], url: url, successBlock: { (responseBody) in
+            let dataDict = responseBody.objectForKey("data")!
+            if self.recommendArray != nil {
+                self.recommendArray.removeAllObjects()
+            }
+            for i in 0 ..< dataDict.count {
+                let recommend = RecommendModel.mj_objectWithKeyValues(dataDict[i])
+                self.recommendArray.addObject(recommend)
+            }
+            self.tableView.reloadData()
             self.tableView.mj_header.endRefreshing()
             }) { (error) in
                 print(error)
@@ -205,12 +229,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 5
+        return 4
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+//        推荐的row是根据结果的数量来展示，+1是加上title的
+        if section == 3 {
+            return recommendArray.count + 1
+        } else {
+            return 1
+        }
+        
     }
 
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -222,14 +251,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             } else {
                 return 0
             }
-        } else if indexPath.section == 2{
+        } else if indexPath.section == 2 {
             if discountArray.count != 0 {
                 return 160
             } else {
                 return 0
             }
+        } else if indexPath.section == 3 {
+            if indexPath.row != 0 {
+                return 100
+            } else {
+                return 35
+            }
         } else {
-            
             return 70
         }
     }
@@ -247,7 +281,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell!.selectionStyle = UITableViewCellSelectionStyle.None
             return cell!
         } else if indexPath.section == 1 {
-//   如果rushArray数据为空
+//            名店抢购
             if rushArray.count == 0 {
                 let cellIdentifier = "noMoreCell"
                 var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
@@ -270,6 +304,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return cell!
             }
         } else if indexPath.section == 2 {
+//            折扣
             if discountArray.count == 0 {
                 let cellIdentifier = "noMoreCell"
                 var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
@@ -292,7 +327,29 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return cell!
             }
         } else {
-            return HomeMenuCell()
+//            猜你喜欢
+            if indexPath.row == 0 {
+                let cellIdentifier = "noMoreCell"
+                var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)
+                if cell == nil {
+                    cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
+                }
+                cell?.textLabel?.text = "猜你喜欢"
+                cell?.selectionStyle = .None
+                return cell!
+            } else {
+                let cellIdentifier = "recommendCell"
+                var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? RecommendCell
+                if cell == nil {
+                    cell = RecommendCell(style: .Default, reuseIdentifier: cellIdentifier)
+                }
+                if recommendArray.count != 0 {
+                    let recommend = recommendArray[indexPath.row - 1] as! RecommendModel
+                    cell?.setRecommendData(recommend)
+                }
+                cell?.selectionStyle = .None
+                return cell!
+            }
         }
     }
     

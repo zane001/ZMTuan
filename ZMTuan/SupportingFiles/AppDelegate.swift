@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import MapKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
     var rootTabBarController: UITabBarController!
+    var latitude: Double!
+    var longitude: Double!
+    var locationManager: CLLocationManager!
 
     func initRootVC() {
         self.window?.hidden = false
@@ -65,7 +69,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
     }
     
+//    设置定位
+    func setupLocationManager() {
+        self.latitude = LATITUDE_DEFAULT
+        self.longitude = LONGITUDE_DEFAULT
+        self.locationManager = CLLocationManager()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            self.locationManager.delegate = self
+            self.locationManager.distanceFilter = 200.0
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            
+//            需要在Info.plist添加配置，才会弹窗提醒是否allow定位
+            self.locationManager.requestWhenInUseAuthorization()
+            self.locationManager.requestAlwaysAuthorization()
+            self.locationManager.startUpdatingLocation()
+        } else {
+            print("定位失败，请确认是否开启定位功能")
+        }
+        
+    }
+    
+//    MARK: CLLocationManagerDelegate
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let cl = locations.last
+        self.latitude = cl?.coordinate.latitude
+        self.longitude = cl?.coordinate.longitude
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("定位失败")
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        self.setupLocationManager()
         self.initRootVC()
         return true
     }

@@ -77,6 +77,13 @@
 		98D5F2F91CC5361E00C2BBAE /* DiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F2F81CC5361E00C2BBAE /* DiscountCell.swift */; };
 		98D5F2FF1CC5368C00C2BBAE /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F2FE1CC5368C00C2BBAE /* DiscountViewController.swift */; };
 		98D5F3031CC5378A00C2BBAE /* HotQueueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3021CC5378A00C2BBAE /* HotQueueCell.swift */; };
+		98D5F3071CCB688000C2BBAE /* RecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3061CCB688000C2BBAE /* RecommendModel.swift */; };
+		98D5F3091CCB6B8100C2BBAE /* RecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3081CCB6B8100C2BBAE /* RecommendCell.swift */; };
+		98D5F30B1CCB6C2900C2BBAE /* ShopInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F30A1CCB6C2900C2BBAE /* ShopInfoModel.swift */; };
+		98D5F30D1CCB6C3B00C2BBAE /* ShopRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F30C1CCB6C3B00C2BBAE /* ShopRecommendModel.swift */; };
+		98D5F30F1CCB6E2A00C2BBAE /* DisTopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F30E1CCB6E2A00C2BBAE /* DisTopicModel.swift */; };
+		98D5F3111CCB6E3A00C2BBAE /* DisLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3101CCB6E3A00C2BBAE /* DisLabelModel.swift */; };
+		98D5F3131CCB6E4700C2BBAE /* DisDealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3121CCB6E4700C2BBAE /* DisDealModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +161,13 @@
 		98D5F2F81CC5361E00C2BBAE /* DiscountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountCell.swift; sourceTree = "<group>"; };
 		98D5F2FE1CC5368C00C2BBAE /* DiscountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		98D5F3021CC5378A00C2BBAE /* HotQueueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotQueueCell.swift; sourceTree = "<group>"; };
+		98D5F3061CCB688000C2BBAE /* RecommendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendModel.swift; sourceTree = "<group>"; };
+		98D5F3081CCB6B8100C2BBAE /* RecommendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendCell.swift; sourceTree = "<group>"; };
+		98D5F30A1CCB6C2900C2BBAE /* ShopInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopInfoModel.swift; sourceTree = "<group>"; };
+		98D5F30C1CCB6C3B00C2BBAE /* ShopRecommendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopRecommendModel.swift; sourceTree = "<group>"; };
+		98D5F30E1CCB6E2A00C2BBAE /* DisTopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisTopicModel.swift; sourceTree = "<group>"; };
+		98D5F3101CCB6E3A00C2BBAE /* DisLabelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisLabelModel.swift; sourceTree = "<group>"; };
+		98D5F3121CCB6E4700C2BBAE /* DisDealModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisDealModel.swift; sourceTree = "<group>"; };
 		C23326863A97092FCD082CF4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -441,6 +455,7 @@
 				987620CB1CC368AD00C6B1C5 /* RushCell.swift */,
 				98D5F2F81CC5361E00C2BBAE /* DiscountCell.swift */,
 				98D5F3021CC5378A00C2BBAE /* HotQueueCell.swift */,
+				98D5F3081CCB6B8100C2BBAE /* RecommendCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -472,6 +487,7 @@
 				987620C71CC3321500C6B1C5 /* RushDealsModel.swift */,
 				98D5F2EE1CC52F2D00C2BBAE /* HotQueueModel.swift */,
 				98D5F2F61CC5351F00C2BBAE /* DiscountModel.swift */,
+				98D5F3061CCB688000C2BBAE /* RecommendModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -479,6 +495,9 @@
 		9876206C1CBBF74300C6B1C5 /* Discount */ = {
 			isa = PBXGroup;
 			children = (
+				98D5F30E1CCB6E2A00C2BBAE /* DisTopicModel.swift */,
+				98D5F3101CCB6E3A00C2BBAE /* DisLabelModel.swift */,
+				98D5F3121CCB6E4700C2BBAE /* DisDealModel.swift */,
 			);
 			path = Discount;
 			sourceTree = "<group>";
@@ -486,6 +505,8 @@
 		9876206D1CBBF74300C6B1C5 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				98D5F30A1CCB6C2900C2BBAE /* ShopInfoModel.swift */,
+				98D5F30C1CCB6C3B00C2BBAE /* ShopRecommendModel.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -679,20 +700,27 @@
 				98D5F3031CC5378A00C2BBAE /* HotQueueCell.swift in Sources */,
 				9876207F1CBE69EF00C6B1C5 /* HomeMenuCell.swift in Sources */,
 				98D5F2F51CC5312F00C2BBAE /* HotQueueViewController.swift in Sources */,
+				98D5F30D1CCB6C3B00C2BBAE /* ShopRecommendModel.swift in Sources */,
 				98D5F2FF1CC5368C00C2BBAE /* DiscountViewController.swift in Sources */,
 				9876203E1CBBD53700C6B1C5 /* HomeViewController.swift in Sources */,
 				987620731CBBF9F100C6B1C5 /* ShopPriceCell.swift in Sources */,
 				987620771CBBFA0D00C6B1C5 /* ShopRecommendCell.swift in Sources */,
 				987620401CBBD55F00C6B1C5 /* MerchantViewController.swift in Sources */,
 				987620C41CC28AD000C6B1C5 /* NetworkSingleton.swift in Sources */,
+				98D5F3111CCB6E3A00C2BBAE /* DisLabelModel.swift in Sources */,
 				98D5F2F91CC5361E00C2BBAE /* DiscountCell.swift in Sources */,
+				98D5F3071CCB688000C2BBAE /* RecommendModel.swift in Sources */,
+				98D5F3091CCB6B8100C2BBAE /* RecommendCell.swift in Sources */,
 				98D5F2F71CC5351F00C2BBAE /* DiscountModel.swift in Sources */,
 				9876207D1CBE671C00C6B1C5 /* BtnView.swift in Sources */,
+				98D5F30B1CCB6C2900C2BBAE /* ShopInfoModel.swift in Sources */,
 				987620C81CC3321500C6B1C5 /* RushDealsModel.swift in Sources */,
 				98D5F2EF1CC52F2D00C2BBAE /* HotQueueModel.swift in Sources */,
 				9876204A1CBBDB8600C6B1C5 /* Public.swift in Sources */,
 				987620461CBBD58800C6B1C5 /* OnsiteViewController.swift in Sources */,
+				98D5F30F1CCB6E2A00C2BBAE /* DisTopicModel.swift in Sources */,
 				987620751CBBF9FE00C6B1C5 /* ShopImageCell.swift in Sources */,
+				98D5F3131CCB6E4700C2BBAE /* DisDealModel.swift in Sources */,
 				987620421CBBD56A00C6B1C5 /* MineViewController.swift in Sources */,
 				987620CC1CC368AD00C6B1C5 /* RushCell.swift in Sources */,
 			);
