@@ -134,7 +134,10 @@ class DiscountCell: UITableViewCell {
         if ((discount?.type.isEqualToValue(num)) != nil) {
             str = (discount?.tplurl)!
             let range = str.rangeOfString("http")
-            str = str.substringFromIndex(range!.startIndex)
+            if range != nil {
+                
+                str = str.substringFromIndex(range!.startIndex)
+            }
             print(str)
         }
         

@@ -13,6 +13,7 @@
 #import "AFNetworking.h"
 #import "MJExtension.h"
 #import "UIImageView+WebCache.h"
+#import "SVProgressHUD.h"
 
 
 #endif /* Bridging_h */

@@ -84,6 +84,8 @@
 		98D5F30F1CCB6E2A00C2BBAE /* DisTopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F30E1CCB6E2A00C2BBAE /* DisTopicModel.swift */; };
 		98D5F3111CCB6E3A00C2BBAE /* DisLabelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3101CCB6E3A00C2BBAE /* DisLabelModel.swift */; };
 		98D5F3131CCB6E4700C2BBAE /* DisDealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3121CCB6E4700C2BBAE /* DisDealModel.swift */; };
+		98D5F3151CCE687D00C2BBAE /* DiscountOCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3141CCE687D00C2BBAE /* DiscountOCViewController.swift */; };
+		98D5F3171CCE73A000C2BBAE /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3161CCE73A000C2BBAE /* ShopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +170,8 @@
 		98D5F30E1CCB6E2A00C2BBAE /* DisTopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisTopicModel.swift; sourceTree = "<group>"; };
 		98D5F3101CCB6E3A00C2BBAE /* DisLabelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisLabelModel.swift; sourceTree = "<group>"; };
 		98D5F3121CCB6E4700C2BBAE /* DisDealModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisDealModel.swift; sourceTree = "<group>"; };
+		98D5F3141CCE687D00C2BBAE /* DiscountOCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountOCViewController.swift; sourceTree = "<group>"; };
+		98D5F3161CCE73A000C2BBAE /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		C23326863A97092FCD082CF4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -289,6 +293,7 @@
 				987620CD1CC3883D00C6B1C5 /* RushViewController.swift */,
 				98D5F2F41CC5312F00C2BBAE /* HotQueueViewController.swift */,
 				98D5F2FE1CC5368C00C2BBAE /* DiscountViewController.swift */,
+				98D5F3141CCE687D00C2BBAE /* DiscountOCViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 		987620671CBBF6DA00C6B1C5 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				98D5F3161CCE73A000C2BBAE /* ShopViewController.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -694,6 +700,7 @@
 			files = (
 				987620C61CC3320300C6B1C5 /* RushDataModel.swift in Sources */,
 				987620441CBBD57200C6B1C5 /* MoreViewController.swift in Sources */,
+				98D5F3171CCE73A000C2BBAE /* ShopViewController.swift in Sources */,
 				987620CE1CC3883D00C6B1C5 /* RushViewController.swift in Sources */,
 				987620331CBAB1E400C6B1C5 /* AppDelegate.swift in Sources */,
 				987620791CBBFA3D00C6B1C5 /* DiscountTopicCell.swift in Sources */,
@@ -711,6 +718,7 @@
 				98D5F2F91CC5361E00C2BBAE /* DiscountCell.swift in Sources */,
 				98D5F3071CCB688000C2BBAE /* RecommendModel.swift in Sources */,
 				98D5F3091CCB6B8100C2BBAE /* RecommendCell.swift in Sources */,
+				98D5F3151CCE687D00C2BBAE /* DiscountOCViewController.swift in Sources */,
 				98D5F2F71CC5351F00C2BBAE /* DiscountModel.swift in Sources */,
 				9876207D1CBE671C00C6B1C5 /* BtnView.swift in Sources */,
 				98D5F30B1CCB6C2900C2BBAE /* ShopInfoModel.swift in Sources */,

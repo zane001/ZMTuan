@@ -24,10 +24,10 @@ class RushCell: UITableViewCell {
         mingDian.image = UIImage(named: "todaySpecialHeaderTitleImage")
         self.addSubview(mingDian)
         
-//        背景点击事件
-        let tap = UITapGestureRecognizer(target: self, action: #selector(RushCell.onTapBackView(_:)))
         
         for i in 0 ..< 3 {
+//            背景点击事件，需要写在for循环内，生成3个，写在for外面的话，只有最后一个图片才能响应点击事件
+            let tap = UITapGestureRecognizer(target: self, action: #selector(RushCell.onTapBackView(_:)))
             
 //            背景View
             let backView = UIView(frame: CGRectMake(CGFloat(i)*SCREEN_WIDTH/3, 40, (SCREEN_WIDTH-3)/3, 80))

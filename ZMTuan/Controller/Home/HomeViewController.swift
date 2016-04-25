@@ -365,6 +365,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 5
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 3 {
+            if indexPath.row != 0 {
+                let recommend = recommendArray[indexPath.row-1] as! RecommendModel
+                let shopID = recommend.id.stringValue
+                let shopVC = ShopViewController()
+                shopVC.shopID = shopID
+                self.navigationController?.pushViewController(shopVC, animated: true)
+            }
+        }
+    }
+    
 //    MARK: RushDelegate
     func didSelectRushIndex(index: NSInteger) {
         let rushVC = RushViewController()
@@ -373,7 +385,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
 //  MARK: DiscountDelegate
     func didSelectUrl(urlStr: String, withType type: NSNumber, withId ID: NSNumber, withTitle title: String) {
-        
+        let num = NSNumber(long: 1)
+        if type.isEqualToValue(num) {
+            let discountVC = DiscountViewController()
+            discountVC.urlStr = urlStr
+            self.navigationController?.pushViewController(discountVC, animated: true)
+        } else {
+            let IDStr = ID.stringValue
+            let disOCVC = DiscountOCViewController()
+            disOCVC.ID = IDStr
+            disOCVC.title = title
+            self.navigationController?.pushViewController(disOCVC, animated: true)
+        }
     }
     
     /*
