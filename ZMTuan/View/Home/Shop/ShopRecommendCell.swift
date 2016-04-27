@@ -52,7 +52,7 @@ class ShopRecommendCell: UITableViewCell {
         let imgUrl = shopRecM.imgurl.stringByReplacingOccurrencesOfString("w.h", withString: "160.0")
         self.shopImageView.sd_setImageWithURL(NSURL(string: imgUrl), placeholderImage: UIImage(named: "bg_customReview_image_default"))
         self.shopNameLabel.text = shopRecM.brandname
-        self.shopInfoLabel.text = "[\(shopRecM.range)\(shopRecM.title)]"
+        self.shopInfoLabel.text = "[\(shopRecM.range)]\(shopRecM.title)"
         self.shopPriceLabel.text = "\(shopRecM.price.doubleValue)元"
     }
     

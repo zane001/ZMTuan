@@ -37,8 +37,6 @@
 		987620821CBE878800C6B1C5 /* menuData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 987620811CBE878800C6B1C5 /* menuData.plist */; };
 		987620A11CBE881C00C6B1C5 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987620831CBE881C00C6B1C5 /* back@2x.png */; };
 		987620A21CBE881C00C6B1C5 /* icon_deal_anytime_refund@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 987620841CBE881C00C6B1C5 /* icon_deal_anytime_refund@2x.png */; };
-		987620A31CBE881C00C6B1C5 /* icon_collect_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 987620851CBE881C00C6B1C5 /* icon_collect_highlighted.png */; };
-		987620A41CBE881C00C6B1C5 /* icon_collect.png in Resources */ = {isa = PBXBuildFile; fileRef = 987620861CBE881C00C6B1C5 /* icon_collect.png */; };
 		987620A51CBE881C00C6B1C5 /* icon_merchant_share_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 987620871CBE881C00C6B1C5 /* icon_merchant_share_highlighted.png */; };
 		987620A61CBE881C00C6B1C5 /* icon_merchant_share_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 987620881CBE881C00C6B1C5 /* icon_merchant_share_normal.png */; };
 		987620A71CBE881C00C6B1C5 /* btn_backItem.png in Resources */ = {isa = PBXBuildFile; fileRef = 987620891CBE881C00C6B1C5 /* btn_backItem.png */; };
@@ -86,6 +84,8 @@
 		98D5F3131CCB6E4700C2BBAE /* DisDealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3121CCB6E4700C2BBAE /* DisDealModel.swift */; };
 		98D5F3151CCE687D00C2BBAE /* DiscountOCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3141CCE687D00C2BBAE /* DiscountOCViewController.swift */; };
 		98D5F3171CCE73A000C2BBAE /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5F3161CCE73A000C2BBAE /* ShopViewController.swift */; };
+		98D5F31A1CD1187600C2BBAE /* icon_collect_highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 98D5F3181CD1187600C2BBAE /* icon_collect_highlighted.png */; };
+		98D5F31B1CD1187600C2BBAE /* icon_collect.png in Resources */ = {isa = PBXBuildFile; fileRef = 98D5F3191CD1187600C2BBAE /* icon_collect.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,8 +122,6 @@
 		987620811CBE878800C6B1C5 /* menuData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menuData.plist; sourceTree = "<group>"; };
 		987620831CBE881C00C6B1C5 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
 		987620841CBE881C00C6B1C5 /* icon_deal_anytime_refund@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_deal_anytime_refund@2x.png"; sourceTree = "<group>"; };
-		987620851CBE881C00C6B1C5 /* icon_collect_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_collect_highlighted.png; sourceTree = "<group>"; };
-		987620861CBE881C00C6B1C5 /* icon_collect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_collect.png; sourceTree = "<group>"; };
 		987620871CBE881C00C6B1C5 /* icon_merchant_share_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_merchant_share_highlighted.png; sourceTree = "<group>"; };
 		987620881CBE881C00C6B1C5 /* icon_merchant_share_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_merchant_share_normal.png; sourceTree = "<group>"; };
 		987620891CBE881C00C6B1C5 /* btn_backItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_backItem.png; sourceTree = "<group>"; };
@@ -172,6 +170,8 @@
 		98D5F3121CCB6E4700C2BBAE /* DisDealModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisDealModel.swift; sourceTree = "<group>"; };
 		98D5F3141CCE687D00C2BBAE /* DiscountOCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountOCViewController.swift; sourceTree = "<group>"; };
 		98D5F3161CCE73A000C2BBAE /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		98D5F3181CD1187600C2BBAE /* icon_collect_highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_collect_highlighted.png; sourceTree = "<group>"; };
+		98D5F3191CD1187600C2BBAE /* icon_collect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_collect.png; sourceTree = "<group>"; };
 		C23326863A97092FCD082CF4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -366,10 +366,10 @@
 			children = (
 				987620831CBE881C00C6B1C5 /* back@2x.png */,
 				987620841CBE881C00C6B1C5 /* icon_deal_anytime_refund@2x.png */,
-				987620851CBE881C00C6B1C5 /* icon_collect_highlighted.png */,
-				987620861CBE881C00C6B1C5 /* icon_collect.png */,
 				987620871CBE881C00C6B1C5 /* icon_merchant_share_highlighted.png */,
 				987620881CBE881C00C6B1C5 /* icon_merchant_share_normal.png */,
+				98D5F3181CD1187600C2BBAE /* icon_collect_highlighted.png */,
+				98D5F3191CD1187600C2BBAE /* icon_collect.png */,
 				987620891CBE881C00C6B1C5 /* btn_backItem.png */,
 				9876208A1CBE881C00C6B1C5 /* todaySpecialHeaderTitleImage@2x.png */,
 				9876208B1CBE881C00C6B1C5 /* todaySpecialHeaderTitleImage@3x.png */,
@@ -598,9 +598,8 @@
 				987620661CBBF57900C6B1C5 /* Assets.xcassets in Resources */,
 				987620341CBAB27700C6B1C5 /* LaunchScreen.storyboard in Resources */,
 				987620BE1CBE881C00C6B1C5 /* icon_homepage_upArrow@2x.png in Resources */,
-				987620A31CBE881C00C6B1C5 /* icon_collect_highlighted.png in Resources */,
+				98D5F31B1CD1187600C2BBAE /* icon_collect.png in Resources */,
 				987620AA1CBE881C00C6B1C5 /* ic_deal_noBooking@2x.png in Resources */,
-				987620A41CBE881C00C6B1C5 /* icon_collect.png in Resources */,
 				987620B81CBE881C00C6B1C5 /* icon_homepage_downArrow@2x.png in Resources */,
 				987620A81CBE881C00C6B1C5 /* todaySpecialHeaderTitleImage@2x.png in Resources */,
 				987620A11CBE881C00C6B1C5 /* back@2x.png in Resources */,
@@ -634,6 +633,7 @@
 				987620BC1CBE881C00C6B1C5 /* icon_homepage_map.png in Resources */,
 				9876205E1CBBE1A600C6B1C5 /* icon_tabbar_merchant_normal@2x.png in Resources */,
 				987620AC1CBE881C00C6B1C5 /* icon_homepage_beautyCategory.png in Resources */,
+				98D5F31A1CD1187600C2BBAE /* icon_collect_highlighted.png in Resources */,
 				987620A51CBE881C00C6B1C5 /* icon_merchant_share_highlighted.png in Resources */,
 				987620B41CBE881C00C6B1C5 /* icon_homepage_movieCategory.png in Resources */,
 				9876205C1CBBE1A600C6B1C5 /* icon_tabbar_homepage@2x.png in Resources */,
