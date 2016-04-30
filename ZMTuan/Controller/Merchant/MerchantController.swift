@@ -1,5 +1,5 @@
 //
-//  MerchantViewController.swift
+//  MerchantController.swift
 //  ZMTuan
 //
 //  Created by zm on 4/11/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MerchantViewController: UITableViewController {
+class MerchantController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +27,12 @@ class MerchantViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
