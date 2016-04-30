@@ -32,6 +32,18 @@ class NetworkSingleton {
         return manager
     }
     
+//    MARK: 获取广告图片
+    func getAdvLoadingImage(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+        let manager = self.baseHttpRequest()
+        let urlString = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        manager.GET(urlString!, parameters: userInfo, success: { (operation, object) in
+            successBlock(responseBody: object!)
+        }) { (operation, error) in
+            let errorString = error.userInfo["NSLocalizedDescription"] as? String
+            failureBlock(error: errorString!)
+        }
+    }
+    
 //    MARK: 团购模块接口
 //    MAKR: 名店抢购
     func getRushBuyResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
