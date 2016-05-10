@@ -112,5 +112,42 @@ class NetworkSingleton {
                 failureBlock(error: errorString!)
         }
     }
+    
+//    MARK: 获取Cate分组信息
+    func getCateListResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+        let manager = self.baseHttpRequest()
+        let urlStr = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        manager.GET(urlStr!, parameters: userInfo, success: { (operation, object) in
+            successBlock(responseBody: object!)
+            }) { (operation, error) in
+                let errorString = error.userInfo["NSLocalizedDescription"] as? String
+                failureBlock(error: errorString!)
+        }
+    }
+    
+//    MARK: 获取商家列表
+    func getMerchantListResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+        let manager = self.baseHttpRequest()
+        let urlStr = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        manager.GET(urlStr!, parameters: userInfo, success: { (operation, object) in
+            successBlock(responseBody: object!)
+        }) { (operation, error) in
+            let errorString = error.userInfo["NSLocalizedDescription"] as? String
+            failureBlock(error: errorString!)
+        }
+    }
+    
+//    MARK: 获取位置信息
+    func getPresentLocationResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+        let manager = self.baseHttpRequest()
+        let urlStr = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        manager.GET(urlStr!, parameters: userInfo, success: { (operation, object) in
+            successBlock(responseBody: object!)
+        }) { (operation, error) in
+            let errorString = error.userInfo["NSLocalizedDescription"] as? String
+            failureBlock(error: errorString!)
+        }
+    }
+
 }
 

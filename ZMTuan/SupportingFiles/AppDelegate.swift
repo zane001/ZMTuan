@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         let nav1 = UINavigationController(rootViewController: vc1)
         let vc2 = OnsiteViewController()
         let nav2 = UINavigationController(rootViewController: vc2)
-        let vc3 = MerchantViewController()
+        let vc3 = MerchantController()
         let nav3 = UINavigationController(rootViewController: vc3)
         let vc4 = MineViewController()
         let nav4 = UINavigationController(rootViewController: vc4)

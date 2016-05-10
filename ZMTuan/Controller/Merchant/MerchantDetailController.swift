@@ -10,6 +10,8 @@ import UIKit
 
 class MerchantDetailController: UIViewController {
 
+    var poiid: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
