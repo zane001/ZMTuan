@@ -121,7 +121,7 @@ class MerchantFilterCell: UIView, UITableViewDelegate, UITableViewDataSource {
                 cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
 //                下划线
                 let lineView = UIView(frame: CGRectMake(0, 41.5, cell!.frame.size.width, 0.5))
-                lineView.backgroundColor = RGB(192, g: 192, b: 192)
+                lineView.backgroundColor = RGB(0, g: 192, b: 192)
                 cell?.contentView.addSubview(lineView)
             }
             let cateM = bigGroupArray[bigSelectedIndex] as? MerCateGroupModel

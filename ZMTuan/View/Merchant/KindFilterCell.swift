@@ -33,7 +33,7 @@ class KindFilterCell: UITableViewCell {
         self.contentView.addSubview(numberBtn)
         
         let lineView: UIView = UIView(frame: CGRectMake(0, self.frame.size.height-0.5, self.frame.size.width, 0.5))
-        lineView.backgroundColor = RGB(192, g: 192, b: 192)
+        lineView.backgroundColor = RGB(0, g: 192, b: 192)
         self.contentView.addSubview(lineView)
         return self
     }

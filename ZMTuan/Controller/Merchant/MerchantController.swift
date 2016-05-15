@@ -83,8 +83,7 @@ class MerchantController: UIViewController, UITableViewDelegate, UITableViewData
         segBtn2.setTitle("优惠商家", forState: .Normal)
         segBtn2.setTitleColor(UIColor.whiteColor(), forState: .Selected)
         segBtn2.setTitleColor(navigationBarColor, forState: .Normal)
-        segBtn2.backgroundColor = navigationBarColor
-        segBtn2.selected = true
+        segBtn2.backgroundColor = UIColor.whiteColor()
         segBtn2.layer.borderWidth = 1
         segBtn2.layer.borderColor = navigationBarColor.CGColor
         segBtn2.addTarget(self, action: #selector(MerchantController.onSegBtn(_:)), forControlEvents: .TouchUpInside)
@@ -96,7 +95,7 @@ class MerchantController: UIViewController, UITableViewDelegate, UITableViewData
         filterView.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(filterView)
         
-        let filterName: NSArray = ["全部", "全称", "智能排序"]
+        let filterName: NSArray = ["全部", "全城", "智能排序"]
         
         for i in 0 ..< 3 {
 //            文字
@@ -128,7 +127,9 @@ class MerchantController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.separatorStyle = .None
         self.view.addSubview(self.tableView)
         self.setUpTableView()
+        
     }
+
     
     func setUpTableView() {
 //        下拉刷新回调
@@ -189,7 +190,7 @@ class MerchantController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func onBackBtn(sender: UIButton) {
-//        地图
+        print("地图")
     }
     
     func onFilterBtn(sender: UIButton) {
@@ -256,18 +257,20 @@ class MerchantController: UIViewController, UITableViewDelegate, UITableViewData
         
         NetworkSingleton.sharedManager.sharedSingleton.getMerchantListResult([:], url: urlStr, successBlock: { (responseBody) in
             print("获取商家列表成功")
-            let dataArray = responseBody.objectForKey("data") as! NSMutableArray
+            let dataArray = responseBody.objectForKey("data") as? NSMutableArray
             if self.offset == 0 {
                 self.merchantArray.removeAllObjects()
             }
             
-            for i in 0 ..< dataArray.count {
-                let merM = MerchantModel.mj_objectWithKeyValues(dataArray[i])
-                self.merchantArray.addObject(merM)
+            if dataArray != nil {
+                for i in 0 ..< dataArray!.count {
+                    let merM = MerchantModel.mj_objectWithKeyValues(dataArray![i])
+                    self.merchantArray.addObject(merM)
+                }
             }
             self.tableView.reloadData()
             
-            if self.offset == 0 && dataArray.count != 0 {
+            if self.offset == 0 && dataArray != nil {
                 self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), atScrollPosition: .Top, animated: true)
             }
             
@@ -363,7 +366,7 @@ class MerchantController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         let merM = merchantArray[indexPath.row] as! MerchantModel
-        cell?.merM = merM
+        cell?.setMerModel(merM)
 
         return cell!
     }

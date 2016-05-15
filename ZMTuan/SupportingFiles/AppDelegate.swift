@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         let nav5 = UINavigationController(rootViewController: vc5)
         
         vc1.title = "团购"
-        vc2.title = "上门"
+        vc2.title = "值得去"
         vc3.title = "商家"
         vc4.title = "我的"
         vc5.title = "更多"

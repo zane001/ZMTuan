@@ -14,7 +14,7 @@ class MerchantCell: UITableViewCell {
     var merchantNameLabel: UILabel!
     var cateNameLabel: UILabel!
     var evaluateLabel: UILabel!
-    var merM: MerchantModel!
+
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -63,7 +63,7 @@ class MerchantCell: UITableViewCell {
     
 //    显示
     func setMerModel(merModel: MerchantModel) {
-        merM = merModel
+
         let imgUrl: String = merModel.frontImg.stringByReplacingOccurrencesOfString("w.h", withString: "160.0")
         merchantImage.sd_setImageWithURL(NSURL(string: imgUrl), placeholderImage: UIImage(named: "bg_customReview_image_default"))
         
@@ -81,7 +81,7 @@ class MerchantCell: UITableViewCell {
         
         for i in 0 ..< scoreI {
             let imgView = self.contentView.viewWithTag(30 + i) as! UIImageView
-            imgView.image = UIImage(named: "icon_feddCell_star_full")
+            imgView.image = UIImage(named: "icon_feedCell_star_full")
         }
     }
     
