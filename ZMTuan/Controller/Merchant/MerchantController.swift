@@ -174,13 +174,14 @@ class MerchantController: UIViewController, UITableViewDelegate, UITableViewData
         self.view.addSubview(maskView)
         maskView.hidden = true
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(MerchantController.onTapMaskView(_:)))
-        tap.delegate = self
-        maskView.addGestureRecognizer(tap)
-        
         self.groupView = MerchantFilterCell(frame: CGRectMake(0, 0, SCREEN_WIDTH, maskView.frame.size.height-90))
         groupView.delegate = self
         maskView.addSubview(groupView)
+        
+//        添加手势
+        let tap = UITapGestureRecognizer(target: self, action: #selector(MerchantController.onTapMaskView(_:)))
+        tap.delegate = self
+        maskView.addGestureRecognizer(tap)
     }
 
     
