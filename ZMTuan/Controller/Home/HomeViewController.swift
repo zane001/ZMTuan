@@ -64,7 +64,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         arrowImageView.frame = CGRectMake(CGRectGetMaxX(cityBtn.frame), 38, 13, 10)
         backView.addSubview(arrowImageView)
         
-        
+        /*
         let searchView = UIView(frame: CGRectMake(CGRectGetMaxX(arrowImageView.frame)+10, 30, 200, 25))
         searchView.backgroundColor = RGB(7, g: 170, b: 153)
         searchView.layer.masksToBounds = true
@@ -83,7 +83,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         placeHolderLabel.text = "请输入商家、类别、商圈"
         placeHolderLabel.textColor = UIColor.whiteColor()
         searchView.addSubview(placeHolderLabel)
-
+        */
+        
+        let searchBar = UISearchBar(frame: CGRectMake(CGRectGetMaxX(arrowImageView.frame)+10, 30, 250, 28))
+        searchBar.placeholder = "请输入商家、类别、商圈"
+        backView.addSubview(searchBar)
 
         let mapBtn = UIButton(type: .Custom)
         mapBtn.frame = CGRectMake(SCREEN_WIDTH-42, 30, 42, 30)

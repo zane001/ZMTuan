@@ -33,7 +33,7 @@ class RushDealsModel: NSObject {
     var rating: NSNumber!
     var cateDesc: String!
     var noBooking: NSNumber!
-    var campaignPrice: NSNumber!
+    var campaignprice: NSNumber!
     var imgUrl: String!
     
 

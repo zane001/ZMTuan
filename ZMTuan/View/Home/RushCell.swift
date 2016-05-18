@@ -70,8 +70,8 @@ class RushCell: UITableViewCell {
             let rush = rushData[i] as! RushDealsModel
             var imageUrl = rush.mdcLogoUrl
             var newPrice: Int32 = 0
-            if rush.campaignPrice != nil {
-                newPrice = rush.campaignPrice.intValue
+            if rush.campaignprice != nil {
+                newPrice = rush.campaignprice.intValue
             }
             let oldPrice = rush.price.intValue
             
