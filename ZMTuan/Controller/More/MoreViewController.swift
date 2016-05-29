@@ -77,7 +77,7 @@ class MoreViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier)
         }
         
-        cell?.textLabel?.text = dataSource[indexPath.section][indexPath.row] as? String
+        cell?.textLabel?.text = dataSource[indexPath.section].objectAtIndex(indexPath.row) as? String
         cell?.accessoryType = .DisclosureIndicator
         cell?.selectionStyle = .None
         cell?.textLabel?.font = UIFont.systemFontOfSize(15)

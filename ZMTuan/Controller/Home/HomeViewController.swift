@@ -85,8 +85,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         searchView.addSubview(placeHolderLabel)
         */
         
-        let searchBar = UISearchBar(frame: CGRectMake(CGRectGetMaxX(arrowImageView.frame)+10, 30, 250, 28))
+//      UISearchBar包括一个UIView，该UIView包括UISearchBarBackground和UITextField
+        let searchBar = UISearchBar(frame: CGRectMake(CGRectGetMaxX(arrowImageView.frame)+10, 30, 200, 28))
         searchBar.placeholder = "请输入商家、类别、商圈"
+        searchBar.subviews[0].subviews[0].removeFromSuperview()
         backView.addSubview(searchBar)
 
         let mapBtn = UIButton(type: .Custom)
@@ -97,7 +99,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func onMapBtnTap(sender: UIButton) {
-        print("clicked map")
+        let mapVC = MapViewController()
+        self.navigationController?.pushViewController(mapVC, animated: true)
     }
     
     func initTableView() {

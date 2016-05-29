@@ -14,6 +14,8 @@
 #import "MJExtension.h"
 #import "UIImageView+WebCache.h"
 #import "SVProgressHUD.h"
+#import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchAPI.h>
 
 
 #endif /* Bridging_h */

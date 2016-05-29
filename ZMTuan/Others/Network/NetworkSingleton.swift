@@ -148,6 +148,18 @@ class NetworkSingleton {
             failureBlock(error: errorString!)
         }
     }
+    
+//    MARK: 获取附近商家列表
+    func getAroundMerchantResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
+        let manager = self.baseHttpRequest()
+        let urlStr = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        manager.GET(urlStr!, parameters: userInfo, success: { (operation, object) in
+            successBlock(responseBody: object!)
+            }) { (operatinon, error) in
+                let errorString = error.userInfo["NSLocalizedDescription"] as? String
+                failureBlock(error: errorString!)
+        }
+    }
 
 }
 
