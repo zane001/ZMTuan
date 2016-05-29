@@ -33,7 +33,7 @@ class NetworkSingleton {
     }
     
       
-//    MARK: 获取广告图片
+//    MARK: 获取广告图片.
     func getAdvLoadingImage(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
         let manager = self.baseHttpRequest()
 //        此处地址是将接口地址中的 %2A 替换为 *
