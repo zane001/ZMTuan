@@ -32,11 +32,12 @@ class NetworkSingleton {
         return manager
     }
     
+      
 //    MARK: 获取广告图片
     func getAdvLoadingImage(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
         let manager = self.baseHttpRequest()
 //        此处地址是将接口地址中的 %2A 替换为 *
-        let urlString = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        let urlString = url.stringByRemovingPercentEncoding
         manager.GET(urlString!, parameters: userInfo, success: { (operation, object) in
             successBlock(responseBody: object!)
         }) { (operation, error) in
@@ -104,7 +105,7 @@ class NetworkSingleton {
         manager.requestSerializer.setValue("api.meituan.com", forHTTPHeaderField: "Host")
         manager.requestSerializer.setValue("keep-alive", forHTTPHeaderField: "Proxy-Connection")
         manager.requestSerializer.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.124 Safari/537.36", forHTTPHeaderField: "User-Agent")
-        let urlStr = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        let urlStr = url.stringByRemovingPercentEncoding
         manager.GET(urlStr!, parameters: userInfo, success: { (operation, object) in
             successBlock(responseBody: object!)
             }) { (operation, error) in
@@ -116,7 +117,7 @@ class NetworkSingleton {
 //    MARK: 获取Cate分组信息
     func getCateListResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
         let manager = self.baseHttpRequest()
-        let urlStr = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        let urlStr = url.stringByRemovingPercentEncoding
         manager.GET(urlStr!, parameters: userInfo, success: { (operation, object) in
             successBlock(responseBody: object!)
             }) { (operation, error) in
@@ -128,7 +129,7 @@ class NetworkSingleton {
 //    MARK: 获取商家列表
     func getMerchantListResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
         let manager = self.baseHttpRequest()
-        let urlStr = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        let urlStr = url.stringByRemovingPercentEncoding
         manager.GET(urlStr!, parameters: userInfo, success: { (operation, object) in
             successBlock(responseBody: object!)
         }) { (operation, error) in
@@ -140,7 +141,7 @@ class NetworkSingleton {
 //    MARK: 获取位置信息
     func getPresentLocationResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
         let manager = self.baseHttpRequest()
-        let urlStr = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        let urlStr = url.stringByRemovingPercentEncoding
         manager.GET(urlStr!, parameters: userInfo, success: { (operation, object) in
             successBlock(responseBody: object!)
         }) { (operation, error) in
@@ -152,7 +153,7 @@ class NetworkSingleton {
 //    MARK: 获取附近商家列表
     func getAroundMerchantResult(userInfo: NSDictionary, url: String, successBlock: SuccessBlock, failureBlock: FailureBlock) {
         let manager = self.baseHttpRequest()
-        let urlStr = url.stringByReplacingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+        let urlStr = url.stringByRemovingPercentEncoding
         manager.GET(urlStr!, parameters: userInfo, success: { (operation, object) in
             successBlock(responseBody: object!)
             }) { (operatinon, error) in
