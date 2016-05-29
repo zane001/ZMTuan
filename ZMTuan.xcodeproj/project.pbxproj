@@ -171,6 +171,7 @@
 		98F990ED1CFA98CC007F3355 /* icon_map_cateid_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F990E11CFA98CC007F3355 /* icon_map_cateid_default.png */; };
 		98F990EE1CFA98CC007F3355 /* location_no@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F990E21CFA98CC007F3355 /* location_no@2x.png */; };
 		98F990EF1CFA98CC007F3355 /* location_yes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F990E31CFA98CC007F3355 /* location_yes@2x.png */; };
+		98F990F11CFADC51007F3355 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 98F990F01CFADC51007F3355 /* demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -342,6 +343,7 @@
 		98F990E11CFA98CC007F3355 /* icon_map_cateid_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_map_cateid_default.png; sourceTree = "<group>"; };
 		98F990E21CFA98CC007F3355 /* location_no@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_no@2x.png"; sourceTree = "<group>"; };
 		98F990E31CFA98CC007F3355 /* location_yes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_yes@2x.png"; sourceTree = "<group>"; };
+		98F990F01CFADC51007F3355 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		C23326863A97092FCD082CF4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -377,6 +379,7 @@
 		98761FF81CBA4F2500C6B1C5 = {
 			isa = PBXGroup;
 			children = (
+				98F990F01CFADC51007F3355 /* demo.gif */,
 				987620BF1CC2237D00C6B1C5 /* Podfile */,
 				987620031CBA4F2500C6B1C5 /* ZMTuan */,
 				987620021CBA4F2500C6B1C5 /* Products */,
@@ -899,6 +902,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				987620661CBBF57900C6B1C5 /* Assets.xcassets in Resources */,
+				98F990F11CFADC51007F3355 /* demo.gif in Resources */,
 				98F990E71CFA98CC007F3355 /* icon_map_cateid_4.png in Resources */,
 				98F990EF1CFA98CC007F3355 /* location_yes@2x.png in Resources */,
 				983D69021CE239F6003DBFE5 /* icon_dellist_locate_refresh.png in Resources */,
